@@ -19,11 +19,13 @@ repository = ""
 
 license = "Apache-2.0"
 
-keywords = [ ]
+keywords = [ "bump", "version", "lockstep" ]
 
 preferred_target = "wasm"
 
-description = ""
+supported_targets = "wasm+native"
+
+description = "Synchronize module versions and internal dependencies in a MoonBit workspace."
 
 import {
   "moonbitlang/moon_config@0.3.14",
