@@ -15,7 +15,7 @@ version = "0.1.0"
 
 readme = "README.md"
 
-repository = ""
+repository = "https://github.com/Milky2018/lockstep"
 
 license = "Apache-2.0"
 
