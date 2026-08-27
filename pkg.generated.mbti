@@ -1,0 +1,20 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "Milky2018/lockstep"
+
+// Values
+pub async fn synchronize(StringView, StringView) -> SyncSummary
+
+// Errors
+pub(all) suberror SyncError {
+  SyncError(String)
+}
+
+// Types and methods
+pub(all) struct SyncSummary {
+  module_count : Int
+  changed : Bool
+}
+
+// Type aliases
+
+// Traits
