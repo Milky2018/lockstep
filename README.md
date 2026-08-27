@@ -5,11 +5,24 @@ workspace's `moon.work`.
 
 ## Usage
 
-Run Lockstep from the directory that directly contains `moon.work`:
+Run Lockstep from the directory that directly contains `moon.work`.
+
+To run it directly from the Mooncakes registry without installing it:
 
 ```sh
+moonx Milky2018/lockstep 0.2.0
+```
+
+To install the executable and then run it:
+
+```sh
+moon install Milky2018/lockstep
 lockstep 0.2.0
 ```
+
+By default, `moon install` installs the binary as
+`~/.moon/bin/lockstep`. Ensure that `~/.moon/bin` is on `PATH` if the
+`lockstep` command is not found.
 
 Lockstep updates every member's `moon.mod`, then runs `moon work sync` to align
 workspace dependency versions. The target must use exact `MAJOR.MINOR.PATCH`
