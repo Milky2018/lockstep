@@ -11,7 +11,7 @@
 
 name = "Milky2018/lockstep"
 
-version = "0.1.0"
+version = "0.1.1"
 
 readme = "README.md"
 
@@ -28,7 +28,7 @@ supported_targets = "wasm+native"
 description = "Synchronize module versions and internal dependencies in a MoonBit workspace."
 
 import {
-  "moonbitlang/moon_config@0.3.14",
-  "moonbitlang/async@0.21.1",
+  "moonbitlang/moon_config@0.3.15",
+  "moonbitlang/async@0.21.2",
   "moonbitlang/x@0.5.1",
 }
