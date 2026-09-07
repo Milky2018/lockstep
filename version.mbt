@@ -34,7 +34,7 @@ fn parse_numeric_component(
     !component.all(char => char is ('0'..='9')) {
     return invalid_version(kind, input)
   }
-  (@strconv.from_str(component) : Int) catch {
+  (@string.from_str(component) : Int) catch {
     _ => invalid_version(kind, input)
   }
 }

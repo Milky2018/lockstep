@@ -1,4 +1,5 @@
 import {
+  "moonbitlang/core/string",
   "moonbitlang/moon_config",
   "moonbitlang/async",
   "moonbitlang/async/fs",
@@ -7,7 +8,6 @@ import {
   "moonbitlang/async/stdio",
   "moonbitlang/core/argparse",
   "moonbitlang/core/env",
-  "moonbitlang/core/strconv",
   "moonbitlang/x/path",
   "moonbitlang/x/sys",
 }
