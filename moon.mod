@@ -11,7 +11,7 @@
 
 name = "Milky2018/lockstep"
 
-version = "0.1.2"
+version = "0.1.3"
 
 readme = "README.md"
 
