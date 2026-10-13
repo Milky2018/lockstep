@@ -1,6 +1,6 @@
 ///|
 pub(all) struct SyncSummary {
-  module_count : Int
+  module_count : Int32
   changed : Bool
 }
 

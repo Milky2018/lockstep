@@ -5,9 +5,9 @@ pub(all) suberror SyncError {
 
 ///|
 priv struct Version {
-  major : Int
-  minor : Int
-  patch : Int
+  major : Int32
+  minor : Int32
+  patch : Int32
 } derive(Eq, Compare)
 
 ///|
@@ -28,13 +28,13 @@ fn parse_numeric_component(
   kind : StringView,
   input : StringView,
   component : StringView,
-) -> Int raise SyncError {
+) -> Int32 raise SyncError {
   if component.is_empty() ||
     (component.length() > 1 && component[0] == '0') ||
-    !component.all(char => char is ('0'..='9')) {
+    !component.all(char => char is ('0'..<='9')) {
     return invalid_version(kind, input)
   }
-  (@string.from_str(component) : Int) catch {
+  (@string.from_str(component) : Int32) catch {
     _ => invalid_version(kind, input)
   }
 }
@@ -49,10 +49,10 @@ fn valid_identifier(
   }
   let mut numeric = true
   for char in identifier {
-    if !(char is ('0'..='9' | 'a'..='z' | 'A'..='Z' | '-')) {
+    if !(char is ('0'..<='9' | 'a'..<='z' | 'A'..<='Z' | '-')) {
       return false
     }
-    if !(char is ('0'..='9')) {
+    if !(char is ('0'..<='9')) {
       numeric = false
     }
   }

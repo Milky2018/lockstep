@@ -17,7 +17,7 @@ fn config_field(ast : @moon_config.Ast, key : StringView) -> @moon_config.Ast? {
 }
 
 ///|
-fn source_offset(source : String, char_offset : Int) -> Int raise SyncError {
+fn source_offset(source : String, char_offset : Int32) -> Int32 raise SyncError {
   if char_offset == source[:].char_length() {
     return source.length()
   }
@@ -30,8 +30,8 @@ fn source_offset(source : String, char_offset : Int) -> Int raise SyncError {
 ///|
 fn replace_char_range(
   source : String,
-  start_char : Int,
-  end_char : Int,
+  start_char : Int32,
+  end_char : Int32,
   replacement : String,
 ) -> String raise SyncError {
   let start = source_offset(source, start_char)
